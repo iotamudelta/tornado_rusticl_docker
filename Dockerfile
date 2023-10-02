@@ -61,7 +61,7 @@ RUN apt install -y openjdk-17-jdk-headless maven opencl-clhpp-headers opencl-c-h
 RUN git clone https://github.com/beehive-lab/TornadoVM.git
 WORKDIR TornadoVM
 RUN git checkout develop
-RUN ./scripts/tornadovm-installer --jdk jdk17 --backend opencl
+RUN ./bin/tornadovm-installer --jdk jdk17 --backend opencl
 #RUN ./scripts/tornadovm-installer --jdk jdk17 --backend spirv,opencl
 
 RUN echo "source /root/TornadoVM/setvars.sh" >> /root/.bashrc
